@@ -4,13 +4,13 @@ import tkinter as tk
 class Model:
 
     Empty = 0
-    Gracz1 = 1
-    Gracz2 = 2
+    Gracz_1 = 1
+    Gracz_2 = 2
 
     def __init__(self):
         super(Model, self).__init__()
         self.grid = None
-        self.turn = self.PLAYER1
+        self.turn = self.Gracz_1
 
 
 

@@ -30,7 +30,7 @@ class Model:
         """
         with open('emails.txt', 'a') as f:
             f.write(self.email + '\n')
-
+##
 
 
 
