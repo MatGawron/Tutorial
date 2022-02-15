@@ -2,6 +2,7 @@ import re
 import tkinter as tk
 
 class Model:
+
     Empty = 0
     Gracz1 = 1
     Gracz2 = 2

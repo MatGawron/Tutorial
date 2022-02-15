@@ -12,7 +12,7 @@ class Model:
 
     @email.setter
     def email(self, value):
-        """
+        """   dffd
         Validate the email
         :param value:
         :return:
