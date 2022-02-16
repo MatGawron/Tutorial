@@ -1,6 +1,6 @@
 import re
-import tkinter as tk
 from tkinter import ttk
+
 
 class Model:
 
@@ -8,8 +8,8 @@ class Model:
     Gracz_1 = 1
     Gracz_2 = 2
 
-    def __init__(self, Plansza):
-        self.Plansza = Plansza
+    def __init__(self, plansza):
+        self.plansza = plansza
 
     @property
     def email(self):
@@ -27,6 +27,7 @@ class Model:
             self.__email = value
         else:
             raise ValueError(f'Invalid email address: {value}')
+
         def save(self):
             """
         Save the game progress into a file
@@ -34,3 +35,8 @@ class Model:
         """
             with open('game_prg.txt', 'a') as f:
                 f.write(self.game_prg + '\n')
+
+
+class View(ttk.Frame):
+    def __init(self, parent):
+        super().__init__(parent)
