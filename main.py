@@ -1,11 +1,5 @@
 import re
 import tkinter as ttk
-window = ttk.Tk()
-
-root = ttk()
-root.title("Kółko i krzyżyk")
-root.geometry("1200x710")
-
 
 
 class Model:
@@ -49,6 +43,12 @@ class Model:
 
 
 class View(ttk.Frame):
+    window = ttk.Tk()
+
+    root = ttk()
+    root.title("Kółko i krzyżyk")
+    root.geometry("1200x710")
+
     def __init(self, parent):
         super().__init__(parent)
 
