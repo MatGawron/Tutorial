@@ -3,8 +3,13 @@ import tkinter as tk
 from tkinter import ttk
 
 class Model:
-    def __init__(self, email):
-        self.email = email
+
+    Empty = 0
+    Gracz_1 = 1
+    Gracz_2 = 2
+
+    def __init__(self, Plansza):
+        self.Plansza = Plansza
 
     @property
     def email(self):
