@@ -1,5 +1,11 @@
 import re
-from tkinter import ttk
+import tkinter as ttk
+window = ttk.Tk()
+
+root = ttk()
+root.title("Kółko i krzyżyk")
+root.geometry("1200x710")
+
 
 
 class Model:
@@ -28,15 +34,26 @@ class Model:
         else:
             raise ValueError(f'Invalid email address: {value}')
 
-        def save(self):
-            """
+# pusta plansza do gry
+        def __initGrid(self):
+            self.grid = [[self.EMPTY for x in range(3)] for x in range(3)]
+            pass
+
+    def save(self):
+        """
     Save the game progress into a file
     :return:
-            """
-            with open('game_prg.txt', 'a') as f:
-                f.write(self.game_prg + '\n')
+        """
+        with open('game_prg.txt', 'a') as f:
+            f.write(self.game_prg + '\n')
 
 
 class View(ttk.Frame):
     def __init(self, parent):
         super().__init__(parent)
+
+
+
+    def GUI(self):
+        ttk.title("Kółko i krzyżyk")
+        ttk.configure(bg="white")
