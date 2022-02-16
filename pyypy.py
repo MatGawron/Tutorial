@@ -4,7 +4,7 @@ import tkinter as tk
 #
 class Model:
 
-    Empty = 0
+    EMPTY = 0
     Gracz_1 = 1
     Gracz_2 = 2
 
@@ -22,4 +22,4 @@ class Model:
         pass
 
     def __intNowaGra(self, NowaGra):
-        self.NowaGra =
+        self.NowaGra =self.grid

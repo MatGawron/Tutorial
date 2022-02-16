@@ -27,16 +27,10 @@ class Model:
             self.__email = value
         else:
             raise ValueError(f'Invalid email address: {value}')
-
-    def save(self):
-        """
-        Save the email into a file
+        def save(self):
+            """
+        Save the game progress into a file
         :return:
         """
-        with open('emails.txt', 'a') as f:
-            f.write(self.email + '\n')
-##
-
-
-
-
+            with open('game_prg.txt', 'a') as f:
+                f.write(self.game_prg + '\n')
