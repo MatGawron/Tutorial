@@ -39,21 +39,18 @@ class Model:
     :return:
         """
         with open('game_prg.txt', 'a') as f:
-            f.write(self.game_prg + '\n')
+            f.write(self.game_prg.txt + '\n')
 
 
 class View(ttk.Frame):
     window = ttk.Tk()
-
-    root = ttk()
-    root.title("Kółko i krzyżyk")
-    root.geometry(1200,710)
+    window.title("Kółko i krzyżyk")
+    # setting default window size
+    window.geometry("300, 300")
 
     def __init(self, parent):
         super().__init__(parent)
 
 
 
-    def GUI(self):
-        ttk.title("Kółko i krzyżyk")
-        ttk.configure(bg="SystemButtonFace")
+    window.mainloop()
