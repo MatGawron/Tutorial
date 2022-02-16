@@ -47,7 +47,7 @@ class View(ttk.Frame):
 
     root = ttk()
     root.title("Kółko i krzyżyk")
-    root.geometry("1200x710")
+    root.geometry(1200,710)
 
     def __init(self, parent):
         super().__init__(parent)
@@ -56,4 +56,4 @@ class View(ttk.Frame):
 
     def GUI(self):
         ttk.title("Kółko i krzyżyk")
-        ttk.configure(bg="white")
+        ttk.configure(bg="SystemButtonFace")
