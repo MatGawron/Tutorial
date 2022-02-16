@@ -17,10 +17,10 @@ class Model:
 
     @email.setter
     def email(self, value):
-        """   dffd
-        Validate the email
-        :param value:
-        :return:
+        """
+    Validate the email
+    :param value:
+    :return:
         """
         pattern = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
         if re.fullmatch(pattern, value):
@@ -30,9 +30,9 @@ class Model:
 
         def save(self):
             """
-        Save the game progress into a file
-        :return:
-        """
+    Save the game progress into a file
+    :return:
+            """
             with open('game_prg.txt', 'a') as f:
                 f.write(self.game_prg + '\n')
 
