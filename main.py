@@ -1,10 +1,12 @@
 import numpy as np
 import re
 import tkinter as ttk
+import tkinter.messagebox
 
 
 class Model:
-
+    click = True
+    count = 0
     Empty = 0
     Gracz_1 = 1
     Gracz_2 = 2
@@ -26,8 +28,10 @@ class Model:
     Save the game progress into a file
     :return:
         """
-        with open('game_prg.txt', 'a') as f:
-            pass
+        filepath = "C:\Users\Aduś\Desktop\pycharm_Mati\game_prg.txt"
+        f = open(filepath, "w")
+        f.write("Dane")
+        pass
 
 
 class View(ttk.Frame):
