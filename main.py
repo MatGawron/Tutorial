@@ -27,8 +27,9 @@ def __initGrid(self):
 
 class View(ttk.Frame):
     window = ttk.Tk()
+# setting window tittle
     window.title("Kółko i krzyżyk")
-    # setting default window size
+# setting default window size
     window.geometry("300x300")
 
     def __init__(self, grid=np.ones((3, 3)) * np.nan, GUI=None):
@@ -37,7 +38,5 @@ class View(ttk.Frame):
 
     def __init(self, parent):
         super().__init__(parent)
-
-
 
     window.mainloop()
