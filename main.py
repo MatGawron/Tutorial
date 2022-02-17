@@ -11,10 +11,15 @@ class Model:
 
     def __init__(self, plansza):
         self.plansza = plansza
-@property
+
+    @property
 # pusta plansza do gry
-def __initGrid(self):
-    self.grid = [[self.EMPTY for x in range(3)] for x in range(3)]
+    def grid(self):
+        return self.grid
+
+    @grid.setter
+    def grid(self, value):
+        self.grid.set_name = [[self.Empty for x in range(3)] for x in range(3)]
 
     def save(self):
         """
@@ -26,17 +31,19 @@ def __initGrid(self):
 
 
 class View(ttk.Frame):
-    window = ttk.Tk()
+    root = ttk.Tk()
 # setting window tittle
-    window.title("Kółko i krzyżyk")
+    root.title("Kółko i krzyżyk")
 # setting default window size
-    window.geometry("300x300")
+    root.minsize(300, 300)
+    root.maxsize(300, 300)
+    root.configure(bg="light yellow")
 
-    def __init__(self, grid=np.ones((3, 3)) * np.nan, GUI=None):
+    def __init__grid(self, grid=np.ones((3, 3)) * np.nan, gui=None):
         self.grid = grid
-        self.GUI = GUI
+        self.gui = gui
 
     def __init(self, parent):
         super().__init__(parent)
 
-    window.mainloop()
+    root.mainloop()
