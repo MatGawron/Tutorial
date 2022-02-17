@@ -1,3 +1,4 @@
+import numpy as np
 import re
 import tkinter as ttk
 
@@ -10,28 +11,10 @@ class Model:
 
     def __init__(self, plansza):
         self.plansza = plansza
-
-    @property
-    def email(self):
-        return self.__email
-
-    @email.setter
-    def email(self, value):
-        """
-    Validate the email
-    :param value:
-    :return:
-        """
-        pattern = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
-        if re.fullmatch(pattern, value):
-            self.__email = value
-        else:
-            raise ValueError(f'Invalid email address: {value}')
-
+@property
 # pusta plansza do gry
-        def __initGrid(self):
-            self.grid = [[self.EMPTY for x in range(3)] for x in range(3)]
-            pass
+def __initGrid(self):
+    self.grid = [[self.EMPTY for x in range(3)] for x in range(3)]
 
     def save(self):
         """
@@ -47,6 +30,10 @@ class View(ttk.Frame):
     window.title("Kółko i krzyżyk")
     # setting default window size
     window.geometry("300x300")
+
+    def __init__(self, grid=np.ones((3, 3)) * np.nan, GUI=None):
+        self.grid = grid
+        self.GUI = GUI
 
     def __init(self, parent):
         super().__init__(parent)
