@@ -29,8 +29,10 @@ class View(ttk.Frame):
         pass
 
 # Create label
-    label = Label(root, text="gracz1: X gracz2: O")
+    label = Label(root, text="gracz1: X")
+    label2 = Label(root, text="gracz2: O")
     label.grid(row=0)
+    label2.grid(row=0, column=2)
 
 # Create Buttons
     b1 = Button(root, text="", height=4, width=8, bg="black", activebackground="white", fg="white", font="Times 15 bold",
