@@ -1,7 +1,7 @@
 import numpy as np
-import re
+#import re
 import tkinter as ttk
-import tkinter.messagebox
+#import tkinter.messagebox
 
 
 class Model:
@@ -28,12 +28,11 @@ class Model:
     Save the game progress into a file
     :return:
         """
-        filepath = "C:\Users\Aduś\Desktop\pycharm_Mati\game_prg.txt"
+        filepath = "game_prg.txt"
         f = open(filepath, "w")
         f.write("Dane")
+        f.close()
         pass
-
-
 class View(ttk.Frame):
     root = ttk.Tk()
 # setting window tittle
@@ -51,3 +50,12 @@ class View(ttk.Frame):
         super().__init__(parent)
 
     root.mainloop()
+
+
+
+
+
+
+
+
+
