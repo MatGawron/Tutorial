@@ -14,6 +14,7 @@ class Model:
     def __init__(self, plansza):
         self.plansza = plansza
 
+
 class View(ttk.Frame):
     root = ttk.Tk()
     # setting window tittle
@@ -31,17 +32,35 @@ class View(ttk.Frame):
     label.grid(row=0)
 
 # Create Buttons
-    Button(root, text=" ", width=10, height=4, command=display_checked).grid(row=1, column=1)
-    Button(root, text=" ", width=10, height=4, command=display_checked).grid(row=1, column=2)
-    Button(root, text=" ", width=10, height=4, command=display_checked).grid(row=1, column=3)
+    b1 = Button(root, text="", height=4, width=8, bg="black", activebackground="white", fg="white", font="Times 15 bold",
+                command=lambda: changeVal(b1, 0, 0))
+    b2 = Button(root, text="", height=4, width=8, bg="black", activebackground="white", fg="white", font="Times 15 bold",
+                command=lambda: changeVal(b2, 0, 1))
+    b3 = Button(root, text="", height=4, width=8, bg="black", activebackground="white", fg="white", font="Times 15 bold",
+                command=lambda: changeVal(b3, 0, 2))
+    b4 = Button(root, text="", height=4, width=8, bg="black", activebackground="white", fg="white", font="Times 15 bold",
+                command=lambda: changeVal(b4, 1, 0))
+    b5 = Button(root, text="", height=4, width=8, bg="black", activebackground="white", fg="white", font="Times 15 bold",
+                command=lambda: changeVal(b5, 1, 1))
+    b6 = Button(root, text="", height=4, width=8, bg="black", activebackground="white", fg="white", font="Times 15 bold",
+                command=lambda: changeVal(b6, 1, 2))
+    b7 = Button(root, text="", height=4, width=8, bg="black", activebackground="white", fg="white", font="Times 15 bold",
+                command=lambda: changeVal(b7, 2, 0))
+    b8 = Button(root, text="", height=4, width=8, bg="black", activebackground="white", fg="white", font="Times 15 bold",
+                command=lambda: changeVal(b8, 2, 1))
+    b9 = Button(root, text="", height=4, width=8, bg="black", activebackground="white", fg="white", font="Times 15 bold",
+                command=lambda: changeVal(b9, 2, 2))
+    b1.grid(row=2, column=0)
 
-    Button(root, text=" ", width=10, height=4, command=display_checked).grid(row=2, column=1)
-    Button(root, text=" ", width=10, height=4, command=display_checked).grid(row=2, column=2)
-    Button(root, text=" ", width=10, height=4, command=display_checked).grid(row=2, column=3)
 
-    Button(root, text=" ", width=10, height=4, command=display_checked).grid(row=3, column=1)
-    Button(root, text=" ", width=10, height=4, command=display_checked).grid(row=3, column=2)
-    Button(root, text=" ", width=10, height=4, command=display_checked).grid(row=3, column=3)
+    b2.grid(row=2, column=1)
+    b3.grid(row=2, column=2)
+    b4.grid(row=3, column=0)
+    b5.grid(row=3, column=1)
+    b6.grid(row=3, column=2)
+    b7.grid(row=4, column=0)
+    b8.grid(row=4, column=1)
+    b9.grid(row=4, column=2)
 
     root.mainloop()
 
