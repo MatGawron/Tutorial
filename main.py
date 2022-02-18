@@ -22,8 +22,7 @@ class View(ttk.Frame):
     # setting window tittle
     root.title("Kółko i krzyżyk")
     # setting default window size
-    root.minsize(600, 600)
-    root.maxsize(600, 600)
+    root.geometry("318x348")
     root.configure(bg="light yellow")
 
     def display_checked(self):
