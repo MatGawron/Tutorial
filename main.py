@@ -14,14 +14,16 @@ class Model:
     def __init__(self, plansza):
         self.plansza = plansza
 
+global board
+board = [[" " for x in range(3)] for y in range(3)]
 
 class View(ttk.Frame):
     root = ttk.Tk()
     # setting window tittle
     root.title("Kółko i krzyżyk")
     # setting default window size
-    root.minsize(300, 300)
-    root.maxsize(300, 300)
+    root.minsize(600, 600)
+    root.maxsize(600, 600)
     root.configure(bg="light yellow")
 
     def display_checked(self):
