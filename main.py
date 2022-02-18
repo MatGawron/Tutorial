@@ -37,23 +37,23 @@ class View(ttk.Frame):
     label2.grid(row=0, column=2)
 
 # Create Buttons
-    b1 = Button(root, text="", height=4, width=8, bg="black", activebackground="white", fg="white",
+    b1 = Button(root, text="", height=4, width=8, bg="light yellow", activebackground="peachpuff", fg="black",
                 font="Times 15 bold", command=lambda: changeVal(b1, 0, 0))
-    b2 = Button(root, text="", height=4, width=8, bg="black", activebackground="white", fg="white",
+    b2 = Button(root, text="", height=4, width=8, bg="light yellow", activebackground="peachpuff", fg="black",
                 font="Times 15 bold", command=lambda: changeVal(b2, 0, 1))
-    b3 = Button(root, text="", height=4, width=8, bg="black", activebackground="white", fg="white",
+    b3 = Button(root, text="", height=4, width=8, bg="light yellow", activebackground="peachpuff", fg="black",
                 font="Times 15 bold", command=lambda: changeVal(b3, 0, 2))
-    b4 = Button(root, text="", height=4, width=8, bg="black", activebackground="white", fg="white",
+    b4 = Button(root, text="", height=4, width=8, bg="light yellow", activebackground="peachpuff", fg="black",
                 font="Times 15 bold", command=lambda: changeVal(b4, 1, 0))
-    b5 = Button(root, text="", height=4, width=8, bg="black", activebackground="white", fg="white",
+    b5 = Button(root, text="", height=4, width=8, bg="light yellow", activebackground="peachpuff", fg="black",
                 font="Times 15 bold", command=lambda: changeVal(b5, 1, 1))
-    b6 = Button(root, text="", height=4, width=8, bg="black", activebackground="white", fg="white",
+    b6 = Button(root, text="", height=4, width=8, bg="light yellow", activebackground="peachpuff", fg="black",
                 font="Times 15 bold", command=lambda: changeVal(b6, 1, 2))
-    b7 = Button(root, text="", height=4, width=8, bg="black", activebackground="white", fg="white",
+    b7 = Button(root, text="", height=4, width=8, bg="light yellow", activebackground="peachpuff", fg="black",
                 font="Times 15 bold", command=lambda: changeVal(b7, 2, 0))
-    b8 = Button(root, text="", height=4, width=8, bg="black", activebackground="white", fg="white",
+    b8 = Button(root, text="", height=4, width=8, bg="light yellow", activebackground="peachpuff", fg="black",
                 font="Times 15 bold", command=lambda: changeVal(b8, 2, 1))
-    b9 = Button(root, text="", height=4, width=8, bg="black", activebackground="white", fg="white",
+    b9 = Button(root, text="", height=4, width=8, bg="light yellow", activebackground="peachpuff", fg="black",
                 font="Times 15 bold", command=lambda: changeVal(b9, 2, 2))
     b1.grid(row=2, column=0)
     b2.grid(row=2, column=1)
