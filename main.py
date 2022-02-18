@@ -51,8 +51,6 @@ class View(ttk.Frame):
     b9 = Button(root, text="", height=4, width=8, bg="black", activebackground="white", fg="white", font="Times 15 bold",
                 command=lambda: changeVal(b9, 2, 2))
     b1.grid(row=2, column=0)
-
-
     b2.grid(row=2, column=1)
     b3.grid(row=2, column=2)
     b4.grid(row=3, column=0)
