@@ -1,8 +1,8 @@
-
 # import re
 import tkinter as ttk
 from tkinter import *
 import messagebox
+
 
 class Model:
     click = True
@@ -16,10 +16,6 @@ class Model:
         msg=messagebox.askquestion("Confirm","Are you want to Quit? You still have chances!")
         if msg=="yes":
             root.destroy()
-
-global board
-board = [[" " for x in range(3)] for y in range(3)]
-
 
 
 class View(ttk.Frame):
