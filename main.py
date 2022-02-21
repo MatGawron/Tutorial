@@ -2,7 +2,7 @@
 # import re
 import tkinter as ttk
 from tkinter import *
-
+import messagebox
 
 class Model:
     click = True
@@ -11,12 +11,15 @@ class Model:
     Gracz_1 = 1
     Gracz_2 = 2
 
-    def __init__(self, plansza):
-        self.plansza = plansza
-
+    def Quit(self):
+        global root
+        msg=messagebox.askquestion("Confirm","Are you want to Quit? You still have chances!")
+        if msg=="yes":
+            root.destroy()
 
 global board
 board = [[" " for x in range(3)] for y in range(3)]
+
 
 
 class View(ttk.Frame):
@@ -55,6 +58,9 @@ class View(ttk.Frame):
                 font="Times 15 bold", command=lambda: changeVal(b8, 2, 1))
     b9 = Button(root, text="", height=4, width=8, bg="light yellow", activebackground="peachpuff", fg="black",
                 font="Times 15 bold", command=lambda: changeVal(b9, 2, 2))
+
+    exitButton = Button(root, text="exit", height=1, width=3, bg="white", activebackground="peachpuff", fg="black",
+                font="Times 9 bold", command="Quit")
     b1.grid(row=2, column=0)
     b2.grid(row=2, column=1)
     b3.grid(row=2, column=2)
@@ -64,6 +70,7 @@ class View(ttk.Frame):
     b7.grid(row=4, column=0)
     b8.grid(row=4, column=1)
     b9.grid(row=4, column=2)
+    exitButton.grid(row=0, column=1)
 
     root.mainloop()
 
