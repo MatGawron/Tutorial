@@ -29,6 +29,12 @@ class View(ttk.Frame):
     label.grid(row=0)
     label2.grid(row=0, column=2)
 
+    def quit(self):
+        global root
+        msg = messagebox.askquestion("Confirm", "Are you want to Quit? You still have chances!")
+        if msg == "yes":
+            root.destroy()
+
 # Create Buttons
     b1 = Button(root, text="", height=4, width=8, bg="light yellow", activebackground="peachpuff", fg="black",
                 font="Times 15 bold", command=lambda: changeVal(b1, 0, 0))
@@ -50,7 +56,7 @@ class View(ttk.Frame):
                 font="Times 15 bold", command=lambda: changeVal(b9, 2, 2))
 
     exitButton = Button(root, text="exit", height=1, width=3, bg="white", activebackground="peachpuff", fg="black",
-                font="Times 9 bold", command="Quit")
+                        font="Times 9 bold", command=lambda: quit())
     b1.grid(row=2, column=0)
     b2.grid(row=2, column=1)
     b3.grid(row=2, column=2)
@@ -62,19 +68,4 @@ class View(ttk.Frame):
     b9.grid(row=4, column=2)
     exitButton.grid(row=0, column=1)
 
-    def Quit(self):
-        global root
-        msg=messagebox.askquestion("Confirm","Are you want to Quit? You still have chances!")
-        if msg=="yes":
-            root.destroy()
-
     root.mainloop()
-
-
-
-
-
-
-
-
-
