@@ -11,12 +11,6 @@ class Model:
     Gracz_1 = 1
     Gracz_2 = 2
 
-    def Quit(self):
-        global root
-        msg=messagebox.askquestion("Confirm","Are you want to Quit? You still have chances!")
-        if msg=="yes":
-            root.destroy()
-
 
 class View(ttk.Frame):
     root = ttk.Tk()
@@ -67,6 +61,12 @@ class View(ttk.Frame):
     b8.grid(row=4, column=1)
     b9.grid(row=4, column=2)
     exitButton.grid(row=0, column=1)
+
+    def Quit(self):
+        global root
+        msg=messagebox.askquestion("Confirm","Are you want to Quit? You still have chances!")
+        if msg=="yes":
+            root.destroy()
 
     root.mainloop()
 
